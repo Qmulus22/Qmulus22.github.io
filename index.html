@@ -15,7 +15,7 @@
   <!-- NAV -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a class="nav__mark" href="#top">
+      <a class="nav__mark" href="#hero">
         <img src="Assets/images/Emblem.png" alt="DIMIE Laurence Lapara emblem" class="nav__emblem">
       </a>
       <nav class="nav__links" aria-label="Primary">
@@ -34,7 +34,6 @@
     </div>
   </header>
 
-  <!-- AUDIO DOCK -->
   <div class="audio-dock" aria-label="Audio controls">
     <button class="audio-dock__button" id="audioPrev" aria-label="Previous track"><i class="fas fa-backward"></i></button>
     <button class="audio-dock__button" id="audioPlayPause" aria-label="Play/Pause audio"><i class="fas fa-play"></i></button>
@@ -43,9 +42,9 @@
 
   <!-- SOCIAL DOCK -->
   <aside class="social" aria-label="Social links">
-    <a href="#" class="social__link" aria-label="X (Twitter)" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+    <!-- <a href="#" class="social__link" aria-label="X (Twitter)" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
     <a href="#" class="social__link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-    <a href="#" class="social__link" aria-label="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="social__link" aria-label="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a> -->
     <a href="https://github.com/Qmulus22" class="social__link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
     <a href="#" class="social__link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
     <a href="#" class="social__link" aria-label="Ko-fi" target="_blank" rel="noopener"><i class="fas fa-coffee"></i></a>
@@ -60,7 +59,7 @@
     <div class="hero__hatch" aria-hidden="true"></div>
     <div class="hero__content">
       <p class="hero__eyebrow">FRONTEND ENGINEER · CALLSIGN QMULUS22</p>
-      <h1 class="hero__title">DIMIE Laurence<br>Lapara</h1>
+      <h1 class="hero__title">Dimie Laurence<br>Lapara</h1>
       <p class="hero__tagline">I build interfaces that feel engineered, not decorated — fast, precise, built to hold up under load.</p>
       <div class="hero__actions">
         <a href="#projects" class="btn btn--primary">View work</a>
@@ -84,7 +83,7 @@
       <div class="about__grid">
         <div class="about__portrait panel">
           <div class="about__portrait-frame">
-            <img src="Assets/images/me.jpeg" alt="Portrait of DIMIE Laurence Lapara">
+            <img src="Assets/images/me.jpeg" alt="Portrait of Dimie Laurence Lapara">
           </div>
           <div class="about__portrait-caption">
             <span class="mono">STATUS</span>
@@ -125,7 +124,7 @@
         <h2 class="section__title">Skills</h2>
       </div>
       <div class="skills__grid">
-        <div class="skill panel">
+        <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fab fa-js-square skill__icon"></i>
             <span class="skill__name">JavaScript / TypeScript</span>
@@ -133,7 +132,7 @@
           </div>
           <div class="signal"><i></i><i></i><i></i><i></i><i class="off"></i></div>
         </div>
-        <div class="skill panel">
+        <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fab fa-react skill__icon"></i>
             <span class="skill__name">React / Next.js</span>
@@ -141,7 +140,7 @@
           </div>
           <div class="signal"><i></i><i></i><i></i><i></i><i class="off"></i></div>
         </div>
-        <div class="skill panel">
+       <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fab fa-css3-alt skill__icon"></i>
             <span class="skill__name">CSS / Design Systems</span>
@@ -149,7 +148,7 @@
           </div>
           <div class="signal"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
         </div>
-        <div class="skill panel">
+        <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fab fa-node-js skill__icon"></i>
             <span class="skill__name">Node.js / APIs</span>
@@ -157,7 +156,7 @@
           </div>
           <div class="signal"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
         </div>
-        <div class="skill panel">
+        <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fas fa-universal-access skill__icon"></i>
             <span class="skill__name">Accessibility (WCAG)</span>
@@ -165,7 +164,7 @@
           </div>
           <div class="signal"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
         </div>
-        <div class="skill panel">
+        <div class="skill panel reveal">
           <div class="skill__head">
             <i class="fas fa-cube skill__icon"></i>
             <span class="skill__name">Motion / WebGL</span>
@@ -177,197 +176,11 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
+   <!-- EXPERIENCE -->
+  <section class="section experience" id="experience">
     <div class="section__inner">
       <div class="section__head">
-        <span class="section__tag">03 — Selected Work</span>
-        <h2 class="section__title">Projects</h2>
-      </div>
-      <div class="projects__grid">
-        <article class="project panel">
-          <div class="project__thumb">
-            <span class="mono">PROJECT 01</span>
-          </div>
-          <div class="project__body">
-            <h3>Project Name</h3>
-            <p>One or two sentences describing the problem this project solved and your role in it.</p>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Node</span>
-            </div>
-            <div class="project__links">
-              <a href="#">Live site</a>
-              <a href="#">Source</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel">
-          <div class="project__thumb">
-            <span class="mono">PROJECT 02</span>
-          </div>
-          <div class="project__body">
-            <h3>Project Name</h3>
-            <p>One or two sentences describing the problem this project solved and your role in it.</p>
-            <div class="tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Tailwind</span>
-            </div>
-            <div class="project__links">
-              <a href="#">Live site</a>
-              <a href="#">Source</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel">
-          <div class="project__thumb">
-            <span class="mono">PROJECT 03</span>
-          </div>
-          <div class="project__body">
-            <h3>Project Name</h3>
-            <p>One or two sentences describing the problem this project solved and your role in it.</p>
-            <div class="tags">
-              <span class="tag">Vue</span>
-              <span class="tag">WebGL</span>
-            </div>
-            <div class="project__links">
-              <a href="#">Live site</a>
-              <a href="#">Source</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel">
-          <div class="project__thumb">
-            <span class="mono">PROJECT 04</span>
-          </div>
-          <div class="project__body">
-            <h3>Project Name</h3>
-            <p>One or two sentences describing the problem this project solved and your role in it.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">API</span>
-            </div>
-            <div class="project__links">
-              <a href="#">Live site</a>
-              <a href="#">Source</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- DESIGNS -->
-  <section class="section section--alt" id="designs">
-    <div class="section__inner">
-      <div class="section__head">
-        <span class="section__tag">04 — UI / UX Gallery</span>
-        <h2 class="section__title">Designs</h2>
-      </div>
-      <div class="projects__grid">
-        <article class="project panel design">
-          <div class="project__thumb design__thumb">
-            <span class="mono">FIGMA 01</span>
-          </div>
-          <div class="project__body">
-            <h3>Mobile App Redesign</h3>
-            <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
-            <div class="tags">
-              <span class="tag">Figma</span>
-              <span class="tag">Mobile UI</span>
-            </div>
-            <div class="project__links">
-              <a href="#">View in Figma</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel design">
-          <div class="project__thumb design__thumb">
-            <span class="mono">FIGMA 02</span>
-          </div>
-          <div class="project__body">
-            <h3>Dashboard UI Kit</h3>
-            <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
-            <div class="tags">
-              <span class="tag">Figma</span>
-              <span class="tag">Design System</span>
-            </div>
-            <div class="project__links">
-              <a href="#">View in Figma</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel design">
-          <div class="project__thumb design__thumb">
-            <span class="mono">FIGMA 03</span>
-          </div>
-          <div class="project__body">
-            <h3>Checkout Flow</h3>
-            <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
-            <div class="tags">
-              <span class="tag">Figma</span>
-              <span class="tag">UX Research</span>
-            </div>
-            <div class="project__links">
-              <a href="#">View in Figma</a>
-            </div>
-          </div>
-        </article>
-        <article class="project panel design">
-          <div class="project__thumb design__thumb">
-            <span class="mono">FIGMA 04</span>
-          </div>
-          <div class="project__body">
-            <h3>Component Library</h3>
-            <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
-            <div class="tags">
-              <span class="tag">Figma</span>
-              <span class="tag">Prototyping</span>
-            </div>
-            <div class="project__links">
-              <a href="#">View in Figma</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="section" id="certifications">
-    <div class="section__inner">
-      <div class="section__head">
-        <span class="section__tag">05 — Credentials</span>
-        <h2 class="section__title">Certifications</h2>
-      </div>
-      <div class="certs">
-        <div class="certs__stage-wrap">
-          <div class="certs__stage panel" id="certStage">
-            <img class="certs__image" id="certImage" src="Assets/images/CyberSec.png" alt="Certification badge">
-            <div class="certs__swipe certs__swipe--a" id="swipeA"></div>
-            <div class="certs__swipe certs__swipe--b" id="swipeB"></div>
-          </div>
-          <div class="certs__nav">
-            <button id="certPrev" aria-label="Previous certification">&#10094;</button>
-            <button id="certNext" aria-label="Next certification">&#10095;</button>
-          </div>
-        </div>
-        <div class="certs__bar" aria-hidden="true"><span>CERTIFICATIONS</span></div>
-      </div>
-      <div class="certs__details">
-        <span class="mono" id="certCounter">1 / 6</span>
-        <h3 id="certTitle">Cybersecurity Fundamentals</h3>
-        <p id="certDesc">Placeholder description — replace with the issuing body, date earned, and what this credential covers.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section section--alt experience" id="experience">
-    <div class="section__inner">
-      <div class="section__head">
-        <span class="section__tag">06 — Field Record</span>
+        <span class="section__tag">03 — Field Record</span>
         <h2 class="section__title">Experience</h2>
       </div>
       <div class="checkline" id="checkline">
@@ -401,6 +214,210 @@
       </div>
     </div>
   </section>
+
+
+  <!-- PROJECTS -->
+  <section class="section section--alt" id="projects">
+    <div class="section__inner">
+      <div class="section__head">
+        <span class="section__tag">04 — Selected Work</span>
+        <h2 class="section__title">Projects</h2>
+      </div>
+      <div class="projects__grid">
+        <!-- ClassMates -->
+        <article class="project panel reveal" data-project="classmates">
+          <div class="project__thumb">
+            <img src="Assets/images/ClassMates/CMT.png" alt="ClassMates Thumbnail">
+          </div>
+          <div class="project__body">
+            <h3>ClassMates</h3>
+            <p>A social learning app for students, built with React Native, Appwrite, and TypeScript, featuring a greedy algorithm for optimal study group matching.</p>
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Appwrite</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project__links">
+              <a href="https://play.google.com/store/apps/details?id=com.classmates.app&pli=1" target="_blank">Live site</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cumulus Flights -->
+        <article class="project panel reveal" data-project="cumulus-flights">
+          <div class="project__thumb">
+            <img src="Assets/images/CumulusFlights/CF1.png" alt="Cumulus Flights Thumbnail">
+          </div>
+          <div class="project__body">
+            <h3>Cumulus Flights</h3>
+            <p>A flight booking platform with ASP.NET MVC, MSSQL, and a responsive frontend for seamless user experience.</p>
+            <div class="tags">
+              <span class="tag">ASP.NET MVC</span>
+              <span class="tag">MSSQL</span>
+              <span class="tag">C#</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/Qmulus22/FBMS_CumulusFlights" target="_blank">Source</a>
+              <a href="http://cumulusflights.runasp.net" target="_blank">Live site</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Calzada Dry Goods -->
+        <article class="project panel reveal" data-project="calzada-dry-goods">
+          <div class="project__thumb">
+            <img src="Assets/images/CalzadaDryGoods/CD1.jpeg" alt="Calzada Dry Goods Thumbnail">
+          </div>
+          <div class="project__body">
+            <h3>Calzada Dry Goods</h3>
+            <p>A scalable inventory management system built with C# and MySQL for efficient stock tracking and reporting.</p>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">MySQL</span>
+
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/Qmulus22/CalzadaDryGoods" target="_blank">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- KinderConnect -->
+        <article class="project panel reveal" data-project="kinderconnect">
+          <div class="project__thumb">
+            <img src="Assets/images/KinderConnect/KC1.png" alt="KinderConnect Thumbnail">
+          </div>
+          <div class="project__body">
+            <h3>KinderConnect</h3>
+            <p>A childcare management system with C# and MySQL, designed to streamline communication between parents and educators.</p>
+            <div class="tags">
+              <span class="tag">C#</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <div class="project__links">
+              <a href="#" style="visibility: hidden;">Live site</a>
+              <a href="#" style="visibility: hidden;">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+    <!-- DESIGNS -->
+    <section class="section" id="designs">
+      <div class="section__inner">
+        <div class="section__head">
+          <span class="section__tag">05 — UI / UX Gallery</span>
+          <h2 class="section__title">Designs</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="project panel design reveal">
+            <div class="project__thumb design__thumb">
+              <span class="mono">FIGMA 01</span>
+            </div>
+            <div class="project__body">
+              <h3>Mobile App Redesign</h3>
+              <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
+              <div class="tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Mobile UI</span>
+              </div>
+              <div class="project__links">
+                <a href="#">View in Figma</a>
+              </div>
+            </div>
+          </article>
+          <article class="project panel design reveal">
+            <div class="project__thumb design__thumb">
+              <span class="mono">FIGMA 02</span>
+            </div>
+            <div class="project__body">
+              <h3>Dashboard UI Kit</h3>
+              <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
+              <div class="tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Design System</span>
+              </div>
+              <div class="project__links">
+                <a href="#">View in Figma</a>
+              </div>
+            </div>
+          </article>
+          <article class="project panel design reveal">
+            <div class="project__thumb design__thumb">
+              <span class="mono">FIGMA 03</span>
+            </div>
+            <div class="project__body">
+              <h3>Checkout Flow</h3>
+              <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
+              <div class="tags">
+                <span class="tag">Figma</span>
+                <span class="tag">UX Research</span>
+              </div>
+              <div class="project__links">
+                <a href="#">View in Figma</a>
+              </div>
+            </div>
+          </article>
+          <article class="project panel design reveal">
+            <div class="project__thumb design__thumb">
+              <span class="mono">FIGMA 04</span>
+            </div>
+            <div class="project__body">
+              <h3>Component Library</h3>
+              <p>Short description of the design problem, the flow you reworked, and the outcome.</p>
+              <div class="tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Prototyping</span>
+              </div>
+              <div class="project__links">
+                <a href="#">View in Figma</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section section--alt" id="certifications">
+      <div class="section__inner">
+        <div class="section__head">
+          <span class="section__tag">06 — Credentials</span>
+          <h2 class="section__title">Certifications</h2>
+        </div>
+        <div class="certs">
+          <div class="certs__stage-wrap">
+            <div class="certs__stage panel" id="certStage">
+              <img class="certs__image" id="certImage" src="Assets/images/CyberSec.png" alt="Certification badge">
+              <div class="certs__swipe certs__swipe--a" id="swipeA"></div>
+              <div class="certs__swipe certs__swipe--b" id="swipeB"></div>
+            </div>
+            <div class="certs__nav">
+              <button id="certPrev" aria-label="Previous certification">&#10094;</button>
+              <button id="certNext" aria-label="Next certification">&#10095;</button>
+            </div>
+          </div>
+          <div class="certs__bar" aria-hidden="true"><span>CERTIFICATIONS</span></div>
+        </div>
+        <div class="certs__details">
+          <span class="mono" id="certCounter">1 / 6</span>
+          <h3 id="certTitle">Cybersecurity Fundamentals</h3>
+          <p id="certDesc">Placeholder description — replace with the issuing body, date earned, and what this credential covers.</p>
+        </div>
+      </div>
+    </section>
+
+  
 
   <!-- CONTACT -->
   <section class="section" id="contact">
@@ -438,156 +455,432 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer section--alt">
     <div class="footer__inner">
       <span class="mono">© 2026 DIMIE LAURENCE LAPARA (QMULUS22) — ALL SYSTEMS NOMINAL</span>
       <a href="#top" class="footer__top">Back to top</a>
     </div>
   </footer>
 
-  <audio id="bgAudio" src="Assets/audio/midnightTrip.mp3" loop preload="auto"></audio>
+   <!-- Modal for Project Details -->
+  <div class="modal" id="projectModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__body">
+        <div class="modal__gallery">
+          <div class="modal__main-image">
+            <img id="mainScreenshot" src="" alt="Main Screenshot">
+          </div>
+          <div class="modal__thumbnails" id="modalThumbnails">
+            <!-- Thumbnails will be dynamically added here -->
+          </div>
+        </div>
+        <div class="modal__info">
+          <h2 id="modalTitle">Project Title</h2>
+          <p id="modalDescription">Project description goes here.</p>
+          <div class="tags" id="modalTags">
+            <!-- Tags will be dynamically added here -->
+          </div>
+          <div class="modal__links">
+            <a id="modalLiveSite" href="#" target="_blank">Live Site</a>
+            <a id="modalSource" href="#" target="_blank">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    // Nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.querySelector('.nav__links');
-    navToggle.addEventListener('click', () => {
-      const open = document.body.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', open);
+    <audio id="bgAudio" loop preload="auto"></audio>
+
+<script>
+  // ======================
+  // NAV TOGGLE
+  // ======================
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.nav__links');
+  navToggle.addEventListener('click', () => {
+    const open = document.body.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', false);
     });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', false);
+  });
+
+  // ======================
+  // CERTIFICATIONS CAROUSEL
+  // ======================
+  const certs = [
+    { img: 'Assets/images/CyberSec.png', title: 'Cybersecurity Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/NetSec.png', title: 'Network Security', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Networking.png', title: 'Networking Essentials', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Database.png', title: 'Database Management', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/GitJS.png', title: 'Git & JavaScript', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Html.png', title: 'HTML & Web Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' }
+  ];
+  let certIndex = 0;
+  let certAnimating = false;
+  let certInterval;
+
+  const certImage = document.getElementById('certImage');
+  const certCounter = document.getElementById('certCounter');
+  const certTitle = document.getElementById('certTitle');
+  const certDesc = document.getElementById('certDesc');
+  const swipeA = document.getElementById('swipeA');
+  const swipeB = document.getElementById('swipeB');
+  const certPrev = document.getElementById('certPrev');
+  const certNext = document.getElementById('certNext');
+
+  function renderCert() {
+    const c = certs[certIndex];
+    certImage.src = c.img;
+    certImage.alt = c.title + ' certificate';
+    certCounter.textContent = (certIndex + 1) + ' / ' + certs.length;
+    certTitle.textContent = c.title;
+    certDesc.textContent = c.desc;
+  }
+
+  function goCert(direction) {
+    if (certAnimating) return;
+    certAnimating = true;
+    const runClass = direction === 'next' ? 'run-next' : 'run-prev';
+    swipeA.classList.add(runClass);
+    swipeB.classList.add(runClass);
+
+    setTimeout(() => {
+      certIndex = direction === 'next'
+        ? (certIndex + 1) % certs.length
+        : (certIndex - 1 + certs.length) % certs.length;
+      renderCert();
+    }, 300);
+
+    setTimeout(() => {
+      swipeA.classList.remove('run-next', 'run-prev');
+      swipeB.classList.remove('run-next', 'run-prev');
+      certAnimating = false;
+    }, 720);
+  }
+
+  certPrev.addEventListener('click', () => {
+    clearInterval(certInterval);
+    goCert('prev');
+  });
+  certNext.addEventListener('click', () => {
+    clearInterval(certInterval);
+    goCert('next');
+  });
+
+  function startAutoScroll() {
+    certInterval = setInterval(() => goCert('next'), 5000);
+  }
+  startAutoScroll();
+
+  const certStage = document.getElementById('certStage');
+  certStage.addEventListener('mouseenter', () => clearInterval(certInterval));
+  certStage.addEventListener('mouseleave', startAutoScroll);
+
+  renderCert();
+
+// ======================
+// AUDIO CONTROLS
+// ======================
+const playlist = [
+  { name: 'Midnight Trip', src: 'Assets/audio/midnightTrip.mp3' },
+  { name: 'A Day in Kivotos', src: 'Assets/audio/A_Day_in_Kivotos.mp3' },
+  { name: 'madness', src: 'Assets/audio/madness.mp3' },
+  { name: 'Cyrene Theme', src: 'Assets/audio/Cyrene_Theme.mp3' }
+];
+
+let trackIndex = 0;
+const audio = document.getElementById('bgAudio');
+const audioPlayPause = document.getElementById('audioPlayPause');
+const audioPrev = document.getElementById('audioPrev');
+const audioNext = document.getElementById('audioNext');
+
+let wasPlaying = false;
+
+function loadTrack(i) {
+  trackIndex = (i + playlist.length) % playlist.length;
+  audio.src = playlist[trackIndex].src;
+  if (wasPlaying) audio.play();
+}
+
+function togglePlay() {
+  if (audio.paused) {
+    audio.muted = false;   // always unmute when user explicitly plays
+    audio.play();
+    audioPlayPause.innerHTML = '<i class="fas fa-pause"></i>';
+  } else {
+    audio.pause();
+    audioPlayPause.innerHTML = '<i class="fas fa-play"></i>';
+  }
+}
+
+audioPlayPause.addEventListener('click', (e) => {
+  wasPlaying = !audio.paused; // set before toggling
+  e.stopPropagation();       // don't let this click ALSO fire tryAutoplay
+  togglePlay();
+});
+
+audioPrev.addEventListener('click', () => {
+  wasPlaying = !audio.paused;
+  loadTrack(trackIndex - 1);
+});
+
+audioNext.addEventListener('click', () => {
+  wasPlaying = !audio.paused;
+  loadTrack(trackIndex + 1);
+});
+
+// ======================
+// AUTOPLAY ON FIRST INTERACTION
+// ======================
+// Browsers block audible autoplay without a user gesture,
+// so we load a random track now and start it on the first
+// scroll / click / keypress — whichever happens first.
+trackIndex = Math.floor(Math.random() * playlist.length);
+audio.src = playlist[trackIndex].src;
+
+function tryAutoplay() {
+  audio.muted = false;
+  audio.play().then(() => {
+    audioPlayPause.innerHTML = '<i class="fas fa-pause"></i>';
+  }).catch(() => {
+    // Blocked (e.g. scroll doesn't count as a gesture in Chrome)
+    // Leave the play button as-is; user can still start manually.
+    audioPlayPause.innerHTML = '<i class="fas fa-play"></i>';
+  });
+  // Remove all listeners after the first trigger
+  document.removeEventListener('scroll', tryAutoplay);
+  document.removeEventListener('click', tryAutoplay);
+  document.removeEventListener('keydown', tryAutoplay);
+  document.removeEventListener('touchstart', tryAutoplay);
+}
+
+document.addEventListener('scroll', tryAutoplay, { passive: true });
+document.addEventListener('click', tryAutoplay);
+document.addEventListener('keydown', tryAutoplay);
+document.addEventListener('touchstart', tryAutoplay, { passive: true });
+
+  // ======================
+  // EXPERIENCE CHECKPOINTS
+  // ======================
+  (function initCheckline() {
+    const items = document.querySelectorAll('.checkpoint');
+    const fill = document.getElementById('checklineFill');
+    if (!items.length || !fill) return;
+
+    function updateFill() {
+      const activeItems = Array.from(items).filter(i => i.classList.contains('active'));
+      if (!activeItems.length) {
+        fill.style.height = '0px';
+        return;
+      }
+      const last = activeItems[activeItems.length - 1];
+      const node = last.querySelector('.checkpoint__node');
+      const top = last.offsetTop + node.offsetTop + node.offsetHeight / 2;
+      fill.style.height = top + 'px';
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('active', entry.isIntersecting);
       });
+      updateFill();
+    }, { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+    items.forEach(item => observer.observe(item));
+  })();
+
+  // ======================
+  // PROJECT MODAL LOGIC
+  // ======================
+  // Project data
+  const projects = {
+    "classmates": {
+      title: "ClassMates",
+      description: "A social learning app for students, built with React Native, Appwrite, and TypeScript, featuring a greedy algorithm for optimal study group matching.",
+      tags: ["React Native", "Appwrite", "TypeScript", "JavaScript", "HTML", "CSS"],
+      images: [
+        "Assets/images/ClassMates/CM1.jpg",
+        "Assets/images/ClassMates/CM2.jpg",
+        "Assets/images/ClassMates/CM3.jpg",
+        "Assets/images/ClassMates/CM4.jpg",
+        "Assets/images/ClassMates/CM5.jpg",
+        "Assets/images/ClassMates/CM6.jpg",
+        "Assets/images/ClassMates/CM7.jpg",
+        "Assets/images/ClassMates/CM8.jpg",
+        "Assets/images/ClassMates/CM9.jpg"
+      ],
+      liveSite: "https://play.google.com/store/apps/details?id=com.classmates.app&pli=1",
+      source: null
+    },
+    "cumulus-flights": {
+      title: "Cumulus Flights",
+      description: "A flight booking platform with ASP.NET MVC, MSSQL, and a responsive frontend for seamless user experience.",
+      tags: ["ASP.NET MVC", "MSSQL", "C#", "HTML", "CSS"],
+      images: [
+        "Assets/images/CumulusFlights/CF1.png",
+        "Assets/images/CumulusFlights/CF2.png",
+        "Assets/images/CumulusFlights/CF3.png",
+        "Assets/images/CumulusFlights/CF4.png",
+        "Assets/images/CumulusFlights/CF5.png",
+        "Assets/images/CumulusFlights/CF6.png",
+        "Assets/images/CumulusFlights/CF7.png",
+        "Assets/images/CumulusFlights/CF8.png"
+      ],
+      liveSite: "http://cumulusflights.runasp.net",
+      source: "https://github.com/Qmulus22/FBMS_CumulusFlights"
+    },
+    "calzada-dry-goods": {
+      title: "Calzada Dry Goods",
+      description: "A scalable inventory management system built with C# and MySQL for efficient stock tracking and reporting.",
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+      images: [
+        "Assets/images/CalzadaDryGoods/CD1.jpeg",
+        "Assets/images/CalzadaDryGoods/CD2.jpeg",
+        "Assets/images/CalzadaDryGoods/CD3.jpeg",
+        "Assets/images/CalzadaDryGoods/CD4.jpeg"
+      ],
+      liveSite: null,
+      source: "https://github.com/Qmulus22/CalzadaDryGoods"
+    },
+    "kinderconnect": {
+      title: "KinderConnect",
+      description: "A childcare management system with C# and MySQL, designed to streamline communication between parents and educators.",
+      tags: ["C#", "MySQL"],
+      images: [
+        "Assets/images/KinderConnect/KC1.png",
+        "Assets/images/KinderConnect/KC2.png",
+        "Assets/images/KinderConnect/KC3.png",
+        "Assets/images/KinderConnect/KC4.png",
+        "Assets/images/KinderConnect/KC5.png",
+        "Assets/images/KinderConnect/KC6.png"
+      ],
+      liveSite: null,
+      source: null
+    }
+  };
+
+  // Modal elements
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalTags = document.getElementById("modalTags");
+  const modalLiveSite = document.getElementById("modalLiveSite");
+  const modalSource = document.getElementById("modalSource");
+  const mainScreenshot = document.getElementById("mainScreenshot");
+  const modalThumbnails = document.getElementById("modalThumbnails");
+  const modalClose = document.getElementById("modalClose");
+  const modalOverlay = document.querySelector(".modal__overlay");
+
+  // Open modal and load project details
+  function openModal(projectKey) {
+    const project = projects[projectKey];
+    if (!project) return;
+
+    modalTitle.textContent = project.title;
+    modalDescription.textContent = project.description;
+
+    // Clear existing tags and thumbnails
+    modalTags.innerHTML = "";
+    modalThumbnails.innerHTML = "";
+
+    // Add tags
+    project.tags.forEach(tag => {
+      const tagElement = document.createElement("span");
+      tagElement.className = "tag";
+      tagElement.textContent = tag;
+      modalTags.appendChild(tagElement);
     });
 
-    // Certifications carousel with auto-scroll
-    const certs = [
-      { img: 'Assets/images/CyberSec.png', title: 'Cybersecurity Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-      { img: 'Assets/images/NetSec.png', title: 'Network Security', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-      { img: 'Assets/images/Networking.png', title: 'Networking Essentials', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-      { img: 'Assets/images/Database.png', title: 'Database Management', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-      { img: 'Assets/images/GitJS.png', title: 'Git & JavaScript', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-      { img: 'Assets/images/Html.png', title: 'HTML & Web Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' }
-    ];
-    let certIndex = 0;
-    let certAnimating = false;
-    let certInterval;
-
-    const certImage = document.getElementById('certImage');
-    const certCounter = document.getElementById('certCounter');
-    const certTitle = document.getElementById('certTitle');
-    const certDesc = document.getElementById('certDesc');
-    const swipeA = document.getElementById('swipeA');
-    const swipeB = document.getElementById('swipeB');
-    const certPrev = document.getElementById('certPrev');
-    const certNext = document.getElementById('certNext');
-
-    function renderCert() {
-      const c = certs[certIndex];
-      certImage.src = c.img;
-      certImage.alt = c.title + ' certificate';
-      certCounter.textContent = (certIndex + 1) + ' / ' + certs.length;
-      certTitle.textContent = c.title;
-      certDesc.textContent = c.desc;
-    }
-
-    function goCert(direction) {
-      if (certAnimating) return;
-      certAnimating = true;
-      const runClass = direction === 'next' ? 'run-next' : 'run-prev';
-      swipeA.classList.add(runClass);
-      swipeB.classList.add(runClass);
-
-      setTimeout(() => {
-        certIndex = direction === 'next'
-          ? (certIndex + 1) % certs.length
-          : (certIndex - 1 + certs.length) % certs.length;
-        renderCert();
-      }, 300);
-
-      setTimeout(() => {
-        swipeA.classList.remove('run-next', 'run-prev');
-        swipeB.classList.remove('run-next', 'run-prev');
-        certAnimating = false;
-      }, 720);
-    }
-
-    certPrev.addEventListener('click', () => {
-      clearInterval(certInterval);
-      goCert('prev');
-    });
-    certNext.addEventListener('click', () => {
-      clearInterval(certInterval);
-      goCert('next');
+    // Add thumbnails and set main image
+    project.images.forEach((image, index) => {
+      const thumbnail = document.createElement("img");
+      thumbnail.src = image;
+      thumbnail.alt = `${project.title} Screenshot ${index + 1}`;
+      thumbnail.className = "modal__thumbnail";
+      thumbnail.addEventListener("click", () => {
+        mainScreenshot.src = image;
+      });
+      modalThumbnails.appendChild(thumbnail);
     });
 
-    // Auto-scroll every 5 seconds
-    function startAutoScroll() {
-      certInterval = setInterval(() => goCert('next'), 5000);
-    }
-    startAutoScroll();
+    // Set the first image as the main screenshot
+    mainScreenshot.src = project.images[0];
 
-    // Pause auto-scroll on hover
-    const certStage = document.getElementById('certStage');
-    certStage.addEventListener('mouseenter', () => clearInterval(certInterval));
-    certStage.addEventListener('mouseleave', startAutoScroll);
+    // Set live site and source links
+    modalLiveSite.href = project.liveSite || "#";
+    modalSource.href = project.source || "#";
 
-    renderCert();
+    // Hide links if no URL is provided
+    modalLiveSite.style.display = project.liveSite ? "inline" : "none";
+    modalSource.style.display = project.source ? "inline" : "none";
 
-    // Audio controls
-    const audio = document.getElementById('bgAudio');
-    const audioPlayPause = document.getElementById('audioPlayPause');
-    const audioPrev = document.getElementById('audioPrev');
-    const audioNext = document.getElementById('audioNext');
+    // Show modal
+    modal.classList.add("modal--active");
+    document.body.style.overflow = "hidden";
 
-    audioPlayPause.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        audioPlayPause.innerHTML = '<i class=\"fas fa-pause\"></i>';
-      } else {
-        audio.pause();
-        audioPlayPause.innerHTML = '<i class=\"fas fa-play\"></i>';
+    // Start auto-scroll for thumbnails
+    startAutoScrollThumbnails();
+  }
+
+  // Close modal
+  function closeModal() {
+    modal.classList.remove("modal--active");
+    document.body.style.overflow = "";
+    clearInterval(autoScrollInterval);
+  }
+
+  // Auto-scroll thumbnails
+  let autoScrollInterval;
+  function startAutoScrollThumbnails() {
+    clearInterval(autoScrollInterval);
+    let currentIndex = 0;
+    const thumbnails = modalThumbnails.querySelectorAll(".modal__thumbnail");
+
+    autoScrollInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % thumbnails.length;
+      mainScreenshot.src = thumbnails[currentIndex].src;
+    }, 3000);
+  }
+
+  // Event listeners for project cards
+  document.querySelectorAll(".project").forEach(projectCard => {
+    projectCard.addEventListener("click", (e) => {
+      // Prevent modal from opening if a link is clicked
+      if (e.target.closest("a")) {
+        e.stopPropagation();
+        return;
       }
+      const projectKey = projectCard.getAttribute("data-project");
+      if (projectKey) openModal(projectKey);
     });
+  });
 
-    // Placeholder for audio track navigation
-    audioPrev.addEventListener('click', () => {
-      console.log('Previous track');
-    });
+  // Event listeners for modal close
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
 
-    audioNext.addEventListener('click', () => {
-      console.log('Next track');
-    });
+    (function initReveals() {
+    const cards = document.querySelectorAll('.reveal');
+    if (!cards.length) return;
 
-    // Experience checkpoints
-    (function initCheckline() {
-      const items = document.querySelectorAll('.checkpoint');
-      const fill = document.getElementById('checklineFill');
-      if (!items.length || !fill) return;
-
-      function updateFill() {
-        const activeItems = Array.from(items).filter(i => i.classList.contains('active'));
-        if (!activeItems.length) {
-          fill.style.height = '0px';
-          return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);   // reveal once, don't re-trigger
         }
-        const last = activeItems[activeItems.length - 1];
-        const node = last.querySelector('.checkpoint__node');
-        const top = last.offsetTop + node.offsetTop + node.offsetHeight / 2;
-        fill.style.height = top + 'px';
-      }
+      });
+    }, { threshold: 0.15 });
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('active', entry.isIntersecting);
-        });
-        updateFill();
-      }, { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
-
-      items.forEach(item => observer.observe(item));
-    })();
-  </script>
+    cards.forEach(card => observer.observe(card));
+  })();
+</script>
+  
 </body>
 </html>
