@@ -607,20 +607,28 @@ img { max-width: 100%; display: block; }
   gap: 1.25rem;
 }
 
-.skill { padding: 1.25rem 1.5rem; }
+.skill { 
+  padding: 0.85rem 1.25rem; 
+}
+
+/* Align items center and remove bottom margin since signal bar is gone */
 .skill__head {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.9rem;
+  align-items: center;
+  margin-bottom: 0;
 }
-.skill__name { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
+.skill__name { 
+  font-family: var(--font-display); 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+}
 .skill__level { color: var(--accent-soft); }
 
 .skill__icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--accent);
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
 }
 
 .signal {
