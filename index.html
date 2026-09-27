@@ -9,23 +9,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" id="theme-dark-stylesheet">
+  <link rel="stylesheet" href="styleslight.css" id="theme-light-stylesheet" disabled>
+    <style>
+    /* We're driving the animation ourselves via clip-path,
+      so turn off the browser's default cross-fade */
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+      mix-blend-mode: normal;
+    }
+  </style>
 </head>
 <body>
   <!-- NAV -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a class="nav__mark" href="#hero">
-        <img src="Assets/images/Emblem.png" alt="DIMIE Laurence Lapara emblem" class="nav__emblem">
-      </a>
+    <a class="nav__mark" href="#home">
+      <img src="Assets/images/EmblemB.png" alt="DIMIE Laurence Lapara emblem" class="nav__emblem" id="navEmblem">
+    </a>
       <nav class="nav__links" aria-label="Primary">
-        <a href="#about">About</a>
+        <a href="#marquee">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <!-- <a href="#designs">Designs</a> -->
         <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+        <!-- <a href="#contact">Contact</a> -->
       </nav>
       <a class="nav__cta" href="#contact">Get in touch</a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -48,19 +58,24 @@
     <a href="https://github.com/Qmulus22" class="social__link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/dimie-lapara-b64a54392" class="social__link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:dimielapara@gmail.com" class="social__link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <button class="social__link" id="themeToggle" aria-label="Toggle dark/light mode">
+    <i class="fas fa-moon"></i>
+  </button>
     <!-- <a href="#" class="social__link" aria-label="Ko-fi" target="_blank" rel="noopener"><i class="fas fa-coffee"></i></a> -->
   </aside>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <video class="hero__video" autoplay muted loop playsinline poster="Assets/video/BGV2.mp4">
-      <source src="Assets/video/BGV2.mp4" type="video/mp4">
-    </video>
+  <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="Assets/images/hero-poster.jpg">
+    <source id="heroVideoSource" src="Assets/video/BGV3.mp4" type="video/mp4">
+  </video>
     <div class="hero__overlay"></div>
     <div class="hero__hatch" aria-hidden="true"></div>
     <div class="hero__content">
       <p class="hero__eyebrow">·CALLSIGN QMULUS22</p>
-      <h1 class="hero__title">Dimie Laurence<br>Lapara</h1>
+      <h1 class="hero__title">
+        <span id="heroName" aria-label="Dimie Laurence Lapara"></span><span class="hero__cursor" id="heroCursor">_</span>
+      </h1>
       <p class="hero__tagline">University of Mindanao · Bachelor in Information Technology.</p>
       <div class="hero__actions">
         <a href="#projects" class="btn btn--primary">View work</a>
@@ -73,49 +88,109 @@
     <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
     <a class="hero__scroll" href="#about" aria-label="Scroll to about section">SCROLL</a>
   </section>
-
+<!-- MARQUEE STRIP -->
+<div class="marquee" aria-hidden="true" id="marquee">
+  <div class="marquee__track">
+    <!-- Content repeated twice for seamless loop -->
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+    <div class="marquee__group">
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">CALLSIGN QMULUS</span>
+      <span class="marquee__sep">✦</span>
+      <img src="Assets/images/Emblem.png" alt="" class="marquee__img">
+      <span class="marquee__item">DIMIE LAURENCE LAPARA</span>
+      <span class="marquee__sep">✦</span>
+    </div>
+  </div>
+</div>
   <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section__inner about">
-      <div class="section__head">
-        <span class="section__tag">01 — Profile</span>
-        <h2 class="section__title">About Me</h2>
-      </div>
-      <div class="about__grid">
-        <div class="about__portrait panel">
-          <div class="about__portrait-frame">
-            <img src="Assets/images/me.jpeg" alt="Portrait of Dimie Laurence Lapara">
-          </div>
-          <div class="about__portrait-caption">
-            <span class="mono">STATUS</span>
-            <span class="dot dot--active"></span> Available for work
-          </div>
+<section class="section" id="about">
+  <div class="section__inner about">
+    <div class="section__head">
+      <span class="section__tag">01 — Profile</span>
+      <h2 class="section__title">About Me</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__portrait panel">
+        <div class="about__portrait-frame">
+          <img src="Assets/images/me.jpeg" alt="Portrait of Dimie Laurence Lapara">
         </div>
-        <div class="about__body">
-          <p>
-            I am a full-stack developer focused on building scalable, cloud-native systems that emphasize structure, maintainability, and long-term sustainability. I approach software engineering with a balance of technical discipline and design awareness, giving equal attention to backend architecture, database design, and user experience.
-          </p>
-          <p>
-            My experience spans <strong>C#</strong>, <strong>.NET</strong>, <strong>Python</strong>, <strong>PHP</strong>, and modern web technologies, and I prioritize creating solutions that are resilient, extensible, and thoughtfully engineered. I am particularly interested in <strong>distributed systems</strong>, <strong>DevOps practices</strong>, and <strong>AI-assisted development workflows</strong>, and I continuously refine my skills to stay aligned with emerging technologies and evolving industry standards.
-          </p>
-          <div class="about__stats">
-            <div class="stat">
-              <span class="stat__value">5</span>
-              <span class="stat__label">Years experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat__value">40+</span>
-              <span class="stat__label">Projects shipped</span>
-            </div>
-            <div class="stat">
-              <span class="stat__value">12</span>
-              <span class="stat__label">Teams collaborated with</span>
-            </div>
+        <div class="about__portrait-caption">
+          <span class="mono">STATUS</span>
+          <span class="dot dot--active"></span> Available for work
+        </div>
+          <a class="about__resume" href="Assets/documents/My_Resume.pdf" download>
+          <i class="fas fa-download"></i>
+          <span>Download Resume</span>
+        </a>
+      </div>
+      <div class="about__body">
+        <p>
+          I am a software engineer and designer bridging backend implementation with front-end usability. I design interface wireframes, component systems, and high-fidelity interactive prototypes in <strong>Figma</strong>, then translate them into polished web and mobile applications.
+        </p>
+        <p>
+          My development experience spans <strong>React Native</strong>, <strong>Expo</strong>, <strong>C#</strong>, <strong>.NET</strong>, <strong>Python</strong>, and <strong>PHP</strong>. By aligning modern UI/UX design workflows with scalable technical architecture, I build mobile applications, desktop systems, and responsive web platforms that deliver smooth user experiences.
+        </p>
+        <div class="about__focus">
+          <div class="focus panel reveal">
+            <i class="fas fa-pen-ruler focus__icon"></i>
+            <h3>UI/UX Design &amp; Prototyping</h3>
+            <p>Designing user-friendly interfaces and interactive prototypes using Figma and Canva.</p>
+          </div>
+          <div class="focus panel reveal">
+            <i class="fas fa-database focus__icon"></i>
+            <h3>Database Design &amp; Management</h3>
+            <p>Designing and implementing database solutions for client content and application data needs.</p>
+          </div>
+          <div class="focus panel reveal">
+            <i class="fas fa-lightbulb focus__icon"></i>
+            <h3>Problem Solving</h3>
+            <p>Delivering practical solutions that prioritize functionality and user experience.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SKILLS -->
 <section class="section section--alt" id="skills">
@@ -292,53 +367,70 @@
   </div>
 </section>
 
-   <!-- EXPERIENCE -->
-  <section class="section experience" id="experience">
-    <div class="section__inner">
-      <div class="section__head">
-        <span class="section__tag">03 — Field Record</span>
-        <h2 class="section__title">Experience</h2>
-      </div>
-      <div class="checkline" id="checkline">
-        <div class="checkline__fill" id="checklineFill"></div>
-        <div class="checkline__items" id="checklineItems">
-          <div class="checkpoint" data-index="0">
-            <span class="checkpoint__node"></span>
-            <div class="checkpoint__content panel">
-              <span class="mono checkpoint__date">2024 — PRESENT</span>
-              <h3>Senior Frontend Engineer <span class="timeline__org">— Company Name</span></h3>
-              <p>Placeholder description of scope and impact in this role. Replace with real responsibilities and outcomes.</p>
-            </div>
+  <!-- EXPERIENCE -->
+<section class="section experience" id="experience">
+  <div class="section__inner">
+    <div class="section__head">
+      <span class="section__tag">03 — Field Record</span>
+      <h2 class="section__title">Experience</h2>
+      <span class="mono experience__range">Information Technology Student • AUGUST 2022 — PRESENT</span>
+    </div>
+    <div class="checkline" id="checkline">
+      <div class="checkline__fill" id="checklineFill"></div>
+      <div class="checkline__items" id="checklineItems">
+        <div class="checkpoint" data-index="0">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>Clinic Management System</h3>
+            <p>Developed a medical clinic administration tool to manage patient records, appointments, and operational workflows.</p>
           </div>
-          <div class="checkpoint" data-index="1">
-            <span class="checkpoint__node"></span>
-            <div class="checkpoint__content panel">
-              <span class="mono checkpoint__date">2021 — 2024</span>
-              <h3>Frontend Engineer <span class="timeline__org">— Company Name</span></h3>
-              <p>Placeholder description of scope and impact in this role. Replace with real responsibilities and outcomes.</p>
-            </div>
+        </div>
+        <div class="checkpoint" data-index="1">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>Café POS System</h3>
+            <p>Built a desktop-based Point of Sale application featuring order handling, billing, and sales reporting.</p>
           </div>
-          <div class="checkpoint" data-index="2">
-            <span class="checkpoint__node"></span>
-            <div class="checkpoint__content panel">
-              <span class="mono checkpoint__date">2019 — 2021</span>
-              <h3>Junior Developer <span class="timeline__org">— Company Name</span></h3>
-              <p>Placeholder description of scope and impact in this role. Replace with real responsibilities and outcomes.</p>
-            </div>
+        </div>
+        <div class="checkpoint" data-index="2">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>POS &amp; Inventory System for Retail</h3>
+            <p>Developed a Point of Sale and inventory tracking system tailored for a local dry goods store.</p>
           </div>
-          <div class="checkpoint" data-index="2">
-            <span class="checkpoint__node"></span>
-            <div class="checkpoint__content panel">
-              <span class="mono checkpoint__date">2019 — 2021</span>
-              <h3>Junior Developer <span class="timeline__org">— Company Name</span></h3>
-              <p>Placeholder description of scope and impact in this role. Replace with real responsibilities and outcomes.</p>
-            </div>
+        </div>
+        <div class="checkpoint" data-index="3">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>School Management System</h3>
+            <p>Developed a comprehensive academic administration platform featuring student enrollment tracking, grading and assessment management, section assignment workflows, and role-based access for faculty and administrators.</p>
+          </div>
+        </div>
+        <div class="checkpoint" data-index="4">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>Flight Reservation Management System</h3>
+            <p>Developed a booking system with destination and seat selection, integrated with real-time flight tracking APIs and PayPal online payments.</p>
+          </div>
+        </div>
+        <div class="checkpoint" data-index="5">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>Peer-to-Peer Mobile Tutoring App</h3>
+            <p>Developed a mobile application using React Native and Appwrite featuring a Peer-to-Peer matching tutoring system for a capstone project.</p>
+          </div>
+        </div>
+        <div class="checkpoint" data-index="6">
+          <span class="checkpoint__node"></span>
+          <div class="checkpoint__content panel">
+            <h3>Certifications &amp; Technical Training</h3>
+            <p>Acquired certifications and completed hands-on workshops across Databases, HTML &amp; CSS, Networking, Network Security, Cybersecurity, JavaScript, and GitHub Version Control.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
   <!-- PROJECTS -->
   <section class="section section--alt" id="projects">
@@ -355,7 +447,7 @@
           </div>
           <div class="project__body">
             <h3>ClassMates</h3>
-            <p>A social learning app for students, built with React Native, Appwrite, and TypeScript, featuring a greedy algorithm for optimal study group matching.</p>
+            <p>A social learning app for students, built with React Native, Appwrite, and Expo, featuring a greedy algorithm for optimal study group matching.</p>
             <div class="tags">
               <span class="tag">React Native</span>
               <span class="tag">Appwrite</span>
@@ -364,9 +456,9 @@
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
             </div>
-            <div class="project__links">
+            <!-- <div class="project__links">
               <a href="https://play.google.com/store/apps/details?id=com.classmates.app&pli=1" target="_blank">Live Demo</a>
-            </div>
+            </div> -->
           </div>
         </article>
 
@@ -385,10 +477,10 @@
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
             </div>
-            <div class="project__links">
+            <!-- <div class="project__links">
               <a href="https://github.com/Qmulus22/FBMS_CumulusFlights" target="_blank">GitHub Repo</a>
               <a href="http://cumulusflights.runasp.net" target="_blank">Live Demo</a>
-            </div>
+            </div> -->
           </div>
         </article>
 
@@ -408,9 +500,9 @@
               <span class="tag">MySQL</span>
               
             </div>
-            <div class="project__links">
+            <!-- <div class="project__links">
               <a href="https://github.com/Qmulus22/CalzadaDryGoods" target="_blank">GitHub Repo</a>
-            </div>
+            </div> -->
           </div>
         </article>
 
@@ -421,15 +513,15 @@
           </div>
           <div class="project__body">
             <h3>KinderConnect</h3>
-            <p>A childcare management system with C# and MySQL, designed to streamline communication between parents and educators.</p>
+            <p>A school management system with C# and MySQL, designed to streamline communication between parents and educators.</p>
             <div class="tags">
               <span class="tag">C#</span>
               <span class="tag">MySQL</span>
             </div>
-            <div class="project__links">
+            <!-- <div class="project__links">
               <a href="#" style="visibility: hidden;">Live site</a>
               <a href="#" style="visibility: hidden;">Source</a>
-            </div>
+            </div> -->
           </div>
         </article>
       </div>
@@ -534,7 +626,7 @@
           <div class="certs__bar" aria-hidden="true"><span>CERTIFICATIONS</span></div>
         </div>
         <div class="certs__details">
-          <span class="mono" id="certCounter">1 / 6</span>
+          <span class="mono" id="certCounter">1 / 7</span>
           <h3 id="certTitle">Cybersecurity Fundamentals</h3>
           <!-- <p id="certDesc">Placeholder description — replace with the issuing body, date earned, and what this credential covers.</p> -->
         </div>
@@ -558,6 +650,9 @@
             <li><span class="mono">GITHUB</span><a href="https://github.com/Qmulus22" target="_blank" rel="noopener">github.com/Qmulus22</a></li>
             <li><span class="mono">LINKEDIN</span><a href="https://www.linkedin.com/in/dimie-lapara-b64a54392" target="_blank" rel="noopener">www.linkedin.com/in/dimie-lapara-b64a54392</a></li>
           </ul>
+            <!-- <div class="contact__gif">
+              <img src="Assets/images/swag.gif" alt="Decorative animation">
+            </div> -->
         </div>
        <form class="contact__form panel" action="https://formsubmit.co/dimielapara@gmail.com" method="POST">
           <label>
@@ -609,10 +704,10 @@
           <div class="tags" id="modalTags">
             <!-- Tags will be dynamically added here -->
           </div>
-          <div class="modal__links">
+          <!-- <div class="modal__links">
             <a id="modalLiveSite" href="#" target="_blank">Live Demo</a>
             <a id="modalSource" href="#" target="_blank">GitHub Repo</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -641,12 +736,13 @@
   // CERTIFICATIONS CAROUSEL
   // ======================
   const certs = [
-    { img: 'Assets/images/CyberSec.png', title: 'Cybersecurity Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-    { img: 'Assets/images/NetSec.png', title: 'Network Security', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-    { img: 'Assets/images/Networking.png', title: 'Networking Essentials', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-    { img: 'Assets/images/Database.png', title: 'Database Management', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-    { img: 'Assets/images/GitJS.png', title: 'Git & JavaScript', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
-    { img: 'Assets/images/Html.png', title: 'HTML & Web Fundamentals', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' }
+    { img: 'Assets/images/Database.png', title: 'IT Specialist in Databases', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Html.png', title: 'IT Specialist in HTML and CSS', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Networking.png', title: 'IT Specialist in Networking', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/NetSec.png', title: 'IT Specialist in Network Security', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/CyberSec.png', title: 'IT Specialist in Cybersecurity', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/JavaScript.png', title: 'JavaScript Workshop Certificate', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' },
+    { img: 'Assets/images/Github.png', title: 'GitHub Workshop Certificate', desc: 'Placeholder description — replace with the issuing body, date earned, and what this credential covers.' }
   ];
   let certIndex = 0;
   let certAnimating = false;
@@ -791,35 +887,54 @@ document.addEventListener('click', tryAutoplay);
 document.addEventListener('keydown', tryAutoplay);
 document.addEventListener('touchstart', tryAutoplay, { passive: true });
 
-  // ======================
-  // EXPERIENCE CHECKPOINTS
-  // ======================
-  (function initCheckline() {
-    const items = document.querySelectorAll('.checkpoint');
-    const fill = document.getElementById('checklineFill');
-    if (!items.length || !fill) return;
+// ======================
+// EXPERIENCE CHECKPOINTS
+// ======================
+(function initCheckline() {
+  const items = document.querySelectorAll('.checkpoint');
+  const fill = document.getElementById('checklineFill');
+  if (!items.length || !fill) return;
 
-    function updateFill() {
-      const activeItems = Array.from(items).filter(i => i.classList.contains('active'));
-      if (!activeItems.length) {
-        fill.style.height = '0px';
-        return;
-      }
-      const last = activeItems[activeItems.length - 1];
-      const node = last.querySelector('.checkpoint__node');
-      const top = last.offsetTop + node.offsetTop + node.offsetHeight / 2;
-      fill.style.height = top + 'px';
+  function updateFill() {
+    const active = Array.from(items).filter(i => i.classList.contains('active'));
+    if (!active.length) {
+      fill.style.height = '0px';
+      return;
     }
+    const current = active[0]; // only one is ever active now
+    const node = current.querySelector('.checkpoint__node');
+    const top = current.offsetTop + node.offsetTop + node.offsetHeight / 2;
+    fill.style.height = top + 'px';
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle('active', entry.isIntersecting);
-      });
-      updateFill();
-    }, { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  function setActive(target) {
+    items.forEach(i => i.classList.toggle('active', i === target));
+    updateFill();
+  }
 
-    items.forEach(item => observer.observe(item));
-  })();
+  const observer = new IntersectionObserver((entries) => {
+    // Re-evaluate on every intersection change:
+    // light up whichever checkpoint is closest to viewport center
+    const mid = window.innerHeight / 2;
+    let closest = null;
+    let closestDist = Infinity;
+
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      // skip items fully outside a generous window around center
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const dist = Math.abs(rect.top + rect.height / 2 - mid);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = item;
+      }
+    });
+
+    if (closest) setActive(closest);
+  }, { root: null, rootMargin: '0px 0px -30% 0px', threshold: 0 });
+
+  items.forEach(item => observer.observe(item));
+})();
 
   // ======================
   // PROJECT MODAL LOGIC
@@ -828,7 +943,7 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
   const projects = {
     "classmates": {
       title: "ClassMates",
-      description: "A social learning app for students, built with React Native, Appwrite, and TypeScript, featuring a greedy algorithm for optimal study group matching.",
+      description: "A social learning app for students, built with React Native, Appwrite, and Expo, featuring a greedy algorithm for optimal study group matching.",
       tags: ["React Native", "Appwrite", "TypeScript", "JavaScript", "HTML", "CSS"],
       images: [
         "Assets/images/ClassMates/CM1.jpg",
@@ -863,7 +978,7 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
     },
     "calzada-dry-goods": {
       title: "Calzada Dry Goods",
-      description: "A scalable inventory management system built with C# and MySQL for efficient stock tracking and reporting.",
+      description: "A scalable inventory management system built with PHP and MySQL for efficient stock tracking and reporting.",
       tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
       images: [
         "Assets/images/CalzadaDryGoods/CD1.jpeg",
@@ -876,7 +991,7 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
     },
     "kinderconnect": {
       title: "KinderConnect",
-      description: "A childcare management system with C# and MySQL, designed to streamline communication between parents and educators.",
+      description: "A school management system with PHP and MySQL, designed to streamline communication between parents and educators.",
       tags: ["C#", "MySQL"],
       images: [
         "Assets/images/KinderConnect/KC1.png",
@@ -896,8 +1011,8 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
   const modalTitle = document.getElementById("modalTitle");
   const modalDescription = document.getElementById("modalDescription");
   const modalTags = document.getElementById("modalTags");
-  const modalLiveSite = document.getElementById("modalLiveSite");
-  const modalSource = document.getElementById("modalSource");
+ // const modalLiveSite = document.getElementById("modalLiveSite");
+ // const modalSource = document.getElementById("modalSource");
   const mainScreenshot = document.getElementById("mainScreenshot");
   const modalThumbnails = document.getElementById("modalThumbnails");
   const modalClose = document.getElementById("modalClose");
@@ -939,12 +1054,12 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
     mainScreenshot.src = project.images[0];
 
     // Set live site and source links
-    modalLiveSite.href = project.liveSite || "#";
-    modalSource.href = project.source || "#";
+   // modalLiveSite.href = project.liveSite || "#";
+   // modalSource.href = project.source || "#";
 
     // Hide links if no URL is provided
-    modalLiveSite.style.display = project.liveSite ? "inline" : "none";
-    modalSource.style.display = project.source ? "inline" : "none";
+   // modalLiveSite.style.display = project.liveSite ? "inline" : "none";
+  //  modalSource.style.display = project.source ? "inline" : "none";
 
     // Show modal
     modal.classList.add("modal--active");
@@ -1032,6 +1147,132 @@ document.addEventListener('touchstart', tryAutoplay, { passive: true });
       btn.disabled = false;
     }, 3500);
   });
+
+// ======================
+// THEME TOGGLE (radial wipe + asset swap)
+// ======================
+const themeToggle     = document.getElementById('themeToggle');
+const darkStylesheet  = document.getElementById('theme-dark-stylesheet');
+const lightStylesheet = document.getElementById('theme-light-stylesheet');
+const heroVideo       = document.getElementById('heroVideo');
+const heroVideoSource = document.getElementById('heroVideoSource');
+const navEmblem       = document.getElementById('navEmblem');
+const marqueeEmblems  = document.querySelectorAll('.marquee__img');
+
+// adjust these filenames to whatever you actually have
+const THEME_ASSETS = {
+  dark:  { video: 'Assets/video/BGV2.mp4', emblem: 'Assets/images/Emblem.png' },
+  light: { video: 'Assets/video/BGV3.mp4', emblem: 'Assets/images/EmblemB.png' }
+};
+
+function paintTheme(light) {
+  darkStylesheet.disabled  = light;
+  lightStylesheet.disabled = !light;
+
+  themeToggle.innerHTML = light
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
+
+  const assets = light ? THEME_ASSETS.light : THEME_ASSETS.dark;
+
+  if (heroVideoSource && heroVideo) {
+    heroVideoSource.src = assets.video;
+    heroVideo.load();
+    heroVideo.play().catch(() => {});
+  }
+  if (navEmblem) navEmblem.src = assets.emblem;
+  marqueeEmblems.forEach(img => img.src = assets.emblem);
+
+  document.body.classList.toggle('light-mode', light);
+  localStorage.setItem('theme', light ? 'light' : 'dark');
+}
+
+function switchTheme() {
+  const goingLight = !document.body.classList.contains('light-mode');
+  const rect = themeToggle.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!document.startViewTransition || reduceMotion) {
+    paintTheme(goingLight);
+    return;
+  }
+
+  const transition = document.startViewTransition(() => paintTheme(goingLight));
+
+  transition.ready.then(() => {
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+    document.documentElement.animate(
+      {
+        clipPath: [
+          `circle(0px at ${x}px ${y}px)`,
+          `circle(${endRadius}px at ${x}px ${y}px)`
+        ]
+      },
+      {
+        duration: 650,
+        easing: 'ease-in-out',
+        pseudoElement: '::view-transition-new(root)'
+      }
+    );
+  });
+}
+
+// restore saved theme on load — no animation on first paint
+paintTheme(localStorage.getItem('theme') === 'light');
+
+themeToggle.addEventListener('click', switchTheme);
+
+// ======================
+// HERO NAME TYPEWRITER
+// ======================
+(function typewriterName() {
+  const el = document.getElementById('heroName');
+  const cursor = document.getElementById('heroCursor');
+  if (!el || !cursor) return;
+
+  const lines = ['Dimie Laurence', 'Lapara'];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion) {
+    el.innerHTML = lines.join('<br>');
+    cursor.classList.add('hero__cursor--blink');
+    return;
+  }
+
+  const speed = 70;      // ms per character
+  const lineDelay = 250; // pause between lines
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function render() {
+    let html = '';
+    for (let i = 0; i < lineIndex; i++) html += lines[i] + '<br>';
+    html += lines[lineIndex].slice(0, charIndex);
+    el.innerHTML = html;
+  }
+
+  function tick() {
+    if (charIndex < lines[lineIndex].length) {
+      charIndex++;
+      render();
+      setTimeout(tick, speed);
+    } else if (lineIndex < lines.length - 1) {
+      lineIndex++;
+      charIndex = 0;
+      setTimeout(tick, lineDelay);
+    } else {
+      cursor.classList.add('hero__cursor--blink');
+    }
+  }
+
+  tick();
+})();
   
 </script>
   
